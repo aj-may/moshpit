@@ -14,7 +14,7 @@ MoshPit Actions:
   remove <nickname>                         Removes server form your saved pits
   list                                      Lists all saved pits
     """
-    version = "1.0"
+    version = "1.2"
     parser = OptionParser(usage=usage, version="MoshPit v%s" % version)
 
     (options, args) = parser.parse_args()
