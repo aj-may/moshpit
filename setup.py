@@ -12,11 +12,11 @@ setup(
     author='A.J. May',
     url='http://moshpit.aj7may.com',
     packages=find_packages(),
-    requires=['SQLAlchemy>0.8.0'],
+    requires=['SQLAlchemy(>0.8.0)'],
     install_requires=['SQLAlchemy>0.8.0'],
-    scripts=['moshpit.py'],
+    scripts=['moshpit/moshpit.py'],
     license="Creative Commons Attribution-ShareAlike 3.0 Unported License",
     entry_points={
-    	'console_scripts': ['moshpit = moshpit.moshpit:main']
+    	'console_scripts': ['pit = moshpit.moshpit:main']
     },
 )
