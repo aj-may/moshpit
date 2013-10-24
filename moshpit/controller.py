@@ -1,8 +1,6 @@
 from os import system
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.exc import NoResultFound
-from model import Pit
+from model import Pit, get_session
 
 def get_pit(pit_name):
 	session = get_session()
@@ -70,8 +68,3 @@ def list_pits():
 def pit(pit_name):
 	pit = get_pit(pit_name)
 	return system( "mosh --ssh=\"ssh -p %i\" %s" % (pit.port, pit.host) )
-
-def get_session():
-	engine = create_engine('sqlite:///moshpit.db')
-	Session = sessionmaker(bind=engine)
-	return Session()

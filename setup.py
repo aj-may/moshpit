@@ -1,22 +1,18 @@
 #!/usr/bin/env python
 
-import distribute_setup
-distribute_setup.use_setuptools()
-
 from setuptools import setup, find_packages
 
 setup(
-	name='moshpit',
+	name='MoshPit',
 	description='A wrapper for mosh.  Save hosts and connect to them by nickname.',
-    version='0.1',
+    version='1.2',
     author='A.J. May',
     url='http://moshpit.aj7may.com',
     packages=find_packages(),
     requires=['SQLAlchemy(>0.8.0)'],
     install_requires=['SQLAlchemy>0.8.0'],
-    scripts=['moshpit/moshpit.py'],
+    scripts=['bin/pit'],
     license="Creative Commons Attribution-ShareAlike 3.0 Unported License",
-    entry_points={
-    	'console_scripts': ['pit = moshpit.moshpit:main']
-    },
+    zip_safe = False,
+    include_package_data=True,
 )
