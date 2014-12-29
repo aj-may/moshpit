@@ -5,16 +5,16 @@ from moshpit.controller import get_pit, create_pit, update_pit, remove_pit, list
 
 def main():
     usage = """
-pit <nickname>                              Connects via mosh to specified server
-pit <action> [<args>]                       See actions below
+pit <nickname>                                            Connects via mosh to specified server
+pit <action> [<args>]                                     See actions below
 
 MoshPit Actions:
-  create <nickname> <[user@]host[:port]>    Creates and saves a new pit
-  update <nickname> <[user@]host[:port]>    Updates pit specified by nickname
-  remove <nickname>                         Removes server form your saved pits
-  list                                      Lists all saved pits
+  create <nickname> <[user@]host[:ssh port][:mosh port]>  Creates and saves a new pit
+  update <nickname> <[user@]host[:ssh port][:mosh port]>  Updates pit specified by nickname
+  remove <nickname>                                       Removes server form your saved pits
+  list                                                    Lists all saved pits
     """
-    version = "1.2"
+    version = "2.1"
     parser = OptionParser(usage=usage, version="MoshPit v%s" % version)
 
     (options, args) = parser.parse_args()

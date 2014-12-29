@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 setup(
 	name='MoshPit',
 	description='A wrapper for mosh.  Save hosts and connect to them by nickname.',
-    version='1.2',
+    version='2.1',
     author='A.J. May',
     url='http://moshpit.aj7may.com',
     packages=find_packages(),
